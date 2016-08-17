@@ -55,7 +55,7 @@ function validZipCode () {
         alert("Acceptable Zip");
         stateAbrev ();
     }
-       if else (
+       else if (
         zipCode.length = 10 && zipCode.charAt(5) === "-"
         && zipCode.charAt(0) >= 0 && zipCode.charAt(0) <= 9
         && zipCode.charAt(1) >= 0 && zipCode.charAt(1) <= 9
@@ -76,14 +76,25 @@ function validZipCode () {
 }
 
 function stateAbrev () {
-    var state = prompt("What is your state of residence? Capitalize state abreviation");
+    var state = prompt("What is your state of residence? Capitalize state abreviation").toUpperCase;
     if(state.charAt(0) >= "A" && state.charAt(0) <= "Z"
         && state.charAt(1) >="A" && state.charAt(1) <="Z"
         && state.length === 2){
             alert ("valid state");
-            maritalStat();
+            wedUnwed();
         }else{
             alert ("not a valid state");
             stateAbrev();
         }
+}
+unction wedUnwed(){
+    var maritalStatus = prompt("Are you married?").toLowerCase;
+    if(maritalStatus == "yes" || maritalStatus == "Yes" || maritalStatus == "YES"){
+        alert("Congrats!");
+    }else if(maritalStatus == "no" || maritalStatus == "No" || maritalStatus == "NO"){
+        alert("It's not all it's cracked up to be.");
+    }else{
+        alert("invalid response");
+        wedUnwed();
+    }
 }
