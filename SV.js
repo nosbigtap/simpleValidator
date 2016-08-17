@@ -87,7 +87,7 @@ function stateAbrev () {
             stateAbrev();
         }
 }
-unction wedUnwed(){
+function wedUnwed(){
     var maritalStatus = prompt("Are you married?").toLowerCase;
     if(maritalStatus == "yes" || maritalStatus == "Yes" || maritalStatus == "YES"){
         alert("Congrats!");
