@@ -44,33 +44,34 @@ function validDate () {
 
 function validZipCode () {
     var zipCode = prompt ("Please enter your 7 digit postal (zip) code");
-    if (
-        zipCode.length = 5
-        && zipCode.charAt(0) >= 0 && zipCode.charAt(0) <= 9
-        && zipCode.charAt(1) >= 0 && zipCode.charAt(1) <= 9
-        && zipCode.charAt(2) >= 0 && zipCode.charAt(2) <= 9
-        && zipCode.charAt(3) >= 0 && zipCode.charAt(3) <= 9
-        && zipCode.charAt(4) >= 0 && zipCode.charAt(4) <= 9
-        ) {
-        alert("Acceptable Zip");
-        stateAbrev ();
-    }
-       else if (
-        zipCode.length = 10 && zipCode.charAt(5) === "-"
-        && zipCode.charAt(0) >= 0 && zipCode.charAt(0) <= 9
-        && zipCode.charAt(1) >= 0 && zipCode.charAt(1) <= 9
-        && zipCode.charAt(2) >= 0 && zipCode.charAt(2) <= 9
-        && zipCode.charAt(3) >= 0 && zipCode.charAt(3) <= 9
-        && zipCode.charAt(4) >= 0 && zipCode.charAt(4) <= 9
-        && zipCode.charAt(6) >= 0 && zipCode.charAt(6) <= 9
-        && zipCode.charAt(7) >= 0 && zipCode.charAt(7) <= 9
-        && zipCode.charAt(8) >= 0 && zipCode.charAt(8) <= 9
-        && zipCode.charAt(9) >= 0 && zipCode.charAt(9) <= 9
+    if ( zip.match(/^\d{5}-\d{4}$/)
+    //     zipCode.length = 5
+    //     && zipCode.charAt(0) >= 0 && zipCode.charAt(0) <= 9
+    //     && zipCode.charAt(1) >= 0 && zipCode.charAt(1) <= 9
+    //     && zipCode.charAt(2) >= 0 && zipCode.charAt(2) <= 9
+    //     && zipCode.charAt(3) >= 0 && zipCode.charAt(3) <= 9
+    //     && zipCode.charAt(4) >= 0 && zipCode.charAt(4) <= 9
+    //     ) {
+    //     alert("Acceptable Zip");
+    //     stateAbrev ();
+    // }
+    //    else if (
+    //     zipCode.length = 10 && zipCode.charAt(5) === "-"
+    //     && zipCode.charAt(0) >= 0 && zipCode.charAt(0) <= 9
+    //     && zipCode.charAt(1) >= 0 && zipCode.charAt(1) <= 9
+    //     && zipCode.charAt(2) >= 0 && zipCode.charAt(2) <= 9
+    //     && zipCode.charAt(3) >= 0 && zipCode.charAt(3) <= 9
+    //     && zipCode.charAt(4) >= 0 && zipCode.charAt(4) <= 9
+    //     && zipCode.charAt(6) >= 0 && zipCode.charAt(6) <= 9
+    //     && zipCode.charAt(7) >= 0 && zipCode.charAt(7) <= 9
+    //     && zipCode.charAt(8) >= 0 && zipCode.charAt(8) <= 9
+    //     && zipCode.charAt(9) >= 0 && zipCode.charAt(9) <= 9
         ) {
         alert("Acceptable Zip");
         stateAbrev ();
     } else {
-        alert("")
+        alert("Please enter your 7 digit postal (zip) code")
+        
     }
     
 }
